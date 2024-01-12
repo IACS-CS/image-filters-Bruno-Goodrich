@@ -22,6 +22,7 @@ const ImageSelector: React.FC<Props> = ({ currentImage, onImageSelect }) => {
       display: "flex",
       alignItems: "center",
       padding: 10,
+      color : 'black'
     }),
     singleValue: (provided, state) => ({
       ...provided,

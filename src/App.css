@@ -1,6 +1,6 @@
 body {
-  background-color: #f3f3ff;
-  color: #17171b;
+  background-color: #2e2e2e;
+  color: #ffffff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 figure {
@@ -40,13 +40,13 @@ h1 {
 .bar button {
   margin-right: 8px;
   padding: 8px;
-  background-color: white;
-  color: #222;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
   border: none;
   border-radius: 8px;
 }
 .bar button:hover {
-  background-color: #f8f8f8;
+  background-color: #b4b4b4;
 }
 .options {
   display: flex;
