@@ -14,9 +14,9 @@ export default {
           // Our "max" is half of the max darkening value
           // because we might darken a pixel twice when it's
           // in the corner
-          pixels[redIndex] -= (MAX_DARKENING / 2) * percentage;
-          pixels[greenIndex] -= (MAX_DARKENING / 2) * percentage;
-          pixels[blueIndex] -= (MAX_DARKENING / 2) * percentage;
+          pixels[redIndex] -= (MAX_DARKENING) * percentage;
+          pixels[greenIndex] -= (MAX_DARKENING) * percentage;
+          pixels[blueIndex] -= (MAX_DARKENING) * percentage;
         };
 
         const rowPercentage = row / height;

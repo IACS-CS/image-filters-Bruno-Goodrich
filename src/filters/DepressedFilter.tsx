@@ -1,9 +1,14 @@
+import filters from ".";
+import FilterOptionComponent from "../components/FilterOption";
 import type { Filter } from "../types";
+import vignette from "./samples/vignette";
+
 
 export const Sad : Filter = {
   name: "Sad",
-  apply: (pixels, width, height) => {
-    for (let i = 0; i < pixels.length; i++ ){
+  apply: (pixels, width, height, options) => {
+    for (let i = 0; i < pixels.length; i++){
+      
       const isRed = i % 4 === 0;
       const isGreen = i % 4 === 1;
       const isBlue = i % 4 === 2;
@@ -21,7 +26,9 @@ export const Sad : Filter = {
 pixels[i]=pixels[i]+50
       }
     }
-    return pixels;
+    pixels = vignette.apply(pixels, width, height, options)
+    return pixels
   }
-
-}
+ }
+    
+  
