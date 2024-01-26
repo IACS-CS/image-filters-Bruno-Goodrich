@@ -23,7 +23,7 @@ export const Sad : Filter = {
         pixels[i]=pixels[i]-100
       }
       if (isRed){
-pixels[i]=pixels[i]+50
+      pixels[i]=pixels[i]+50
       }
     }
     pixels = vignette.apply(pixels, width, height, options)

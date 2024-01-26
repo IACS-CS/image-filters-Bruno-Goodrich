@@ -2,9 +2,10 @@
 import type { Filter } from "../types";
 
 type colorOptions = {
-redStrength: number
-blueStrength: number
-greenStrength: number
+red: number;
+blue: number;
+green: number;
+alpha: number;
 }
 
 export const colorShift : Filter<colorOptions> ={
@@ -14,42 +15,50 @@ export const colorShift : Filter<colorOptions> ={
       const isRed = i % 4 === 0;
       const isGreen = i % 4 === 1;
       const isBlue = i % 4 === 2;
-      const redShift = options.redStrength;
-      const blueShift = options.blueStrength;
-      const greenShift = options.greenStrength;
+      const isAlpha= i % 4 ===3
       if (isRed){
-        pixels[i]=pixels[i]+redShift
+        pixels[i] = pixels[i]+options.red
       };
-      if (isBlue){
-        pixels[i]=pixels[i]+blueShift
+     /* if (isBlue){
+        pixels[i]= pixels[i]+options.blue
       }
       if (isGreen){
-        pixels[i]=pixels[i]+greenShift
+        pixels[i]= pixels[i]+options.green
+      }*/
+      if (isAlpha){
+        pixels[i]= pixels[i]-options.alpha
       }
   }
   return pixels 
 },
 options: [
   {
-    name: 'Red',
+    name: 'red',
+    type: 'integer',
+    default:50,
+    min: 0,
+    max: 255,
+  },
+  /*{
+    name: 'blue',
     type: 'integer',
     default: 50,
     min: 0,
     max: 255,
   },
   {
-    name: 'Blue',
-    type: 'integer',
-    default: 50,
-    min: 0,
-    max: 255,
-  },
-  {
-    name: 'Green',
+    name: 'green',
     type: 'integer',
     default: 50,
     min:0,
     max:255,
-  },
+  },*/
+  {
+    name: 'alpha',
+    type: 'integer',
+    default: 50,
+    min:0,
+    max:0,
+  }
 ]
 }
