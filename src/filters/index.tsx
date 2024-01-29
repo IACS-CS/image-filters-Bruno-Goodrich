@@ -7,12 +7,12 @@ import { Sad } from "./DepressedFilter";
 import { colorShift } from "./colorShift";
 
 const filters: Filter[] = [
-  sampleRoseColoredGlasses,
-  sampleGrid,
-  sampleVignette,
-  brightnessFilter,
+  //sampleRoseColoredGlasses,
+  //sampleGrid,
+  //sampleVignette,
   Sad,
   colorShift,
+  brightnessFilter,
 ];
 
 export default filters;
