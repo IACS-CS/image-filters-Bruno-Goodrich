@@ -2,7 +2,7 @@ import type { Filter } from "../../types";
 export default {
   name: "Vignette",
   apply: (pixels: Uint8ClampedArray, width: number, height: number) => {
-    const MAX_DARKENING = 100;
+    const MAX_DARKENING = 200;
     for (let row = 0; row < height; row++) {
       for (let col = 0; col < width; col++) {
         const redIndex = row * 4 * width + col * 4;
