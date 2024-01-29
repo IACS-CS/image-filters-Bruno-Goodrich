@@ -19,12 +19,12 @@ export const colorShift : Filter<colorOptions> ={
       if (isRed){
         pixels[i] = pixels[i]+options.red
       };
-     /* if (isBlue){
+      if (isBlue){
         pixels[i]= pixels[i]+options.blue
       }
       if (isGreen){
         pixels[i]= pixels[i]+options.green
-      }*/
+      }
       if (isAlpha){
         pixels[i]= pixels[i]-options.alpha
       }
@@ -39,7 +39,7 @@ options: [
     min: 0,
     max: 255,
   },
-  /*{
+  {
     name: 'blue',
     type: 'integer',
     default: 50,
@@ -52,7 +52,7 @@ options: [
     default: 50,
     min:0,
     max:255,
-  },*/
+  },
   {
     name: 'alpha',
     type: 'integer',
